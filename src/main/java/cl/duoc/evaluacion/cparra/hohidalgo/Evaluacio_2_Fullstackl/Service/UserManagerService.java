@@ -15,7 +15,7 @@ public class UserManagerService {
 
     public List<UserManager> getUsers(){
         List<UserManagerEntity> users = repository.getAllUsers();
-        List<UserManager>  auxed = new ArrayList<>();
+        List<UserManager> auxed = new ArrayList<>();
         for (UserManagerEntity user : users){
             auxed.add(
                     new UserManager(
@@ -25,10 +25,8 @@ public class UserManagerService {
                             ,user.getEmailUser()
                             ,user.getRole()
                             ,user.isActive()));
-        }
-        return auxed;
+        }return auxed;
     }
-
 
     public UserManager getUserId(int userId){
         List<UserManager> users = getUsers();
@@ -44,7 +42,6 @@ public class UserManagerService {
         UserManagerEntity found = repository.getUserByName(user.getUserName());
 
         if (found != null) {
-            System.out.println("Error: El nombre de usuario '" + user.getUserName() + "' ya existe.");
             return false;
         }
 
