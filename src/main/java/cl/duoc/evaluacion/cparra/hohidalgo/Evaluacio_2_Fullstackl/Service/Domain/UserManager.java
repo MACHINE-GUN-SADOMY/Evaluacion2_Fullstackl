@@ -44,7 +44,6 @@ public class UserManager {
     }
 
     // --------- SETS ----------
-    // Settear estado.
     public void setActive(boolean active) {
         this.isActive = active;
     }

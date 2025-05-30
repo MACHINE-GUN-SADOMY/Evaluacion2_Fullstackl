@@ -1,8 +1,6 @@
 package cl.duoc.evaluacion.cparra.hohidalgo.Evaluacio_2_Fullstackl.Controller;
 
-import ch.qos.logback.core.net.server.Client;
 import cl.duoc.evaluacion.cparra.hohidalgo.Evaluacio_2_Fullstackl.Controller.Request.AddClientManagerRequest;
-import cl.duoc.evaluacion.cparra.hohidalgo.Evaluacio_2_Fullstackl.Repository.Entity.ClientManagerEntity;
 import cl.duoc.evaluacion.cparra.hohidalgo.Evaluacio_2_Fullstackl.Service.Domain.ClientManager;
 import cl.duoc.evaluacion.cparra.hohidalgo.Evaluacio_2_Fullstackl.Service.ClientManagerService;
 import jakarta.validation.Valid;
@@ -17,12 +15,14 @@ import java.util.List;
 // clients estara todos los usuarios del tipo cliente *exclusivamente*
 @RequestMapping("/clients")
 @RestController
-
 public class ClientManagerController {
     @Autowired private ClientManagerService service;
-    @GetMapping public List<ClientManager> getAllClients(){
+
+    @GetMapping
+    public List<ClientManager> getAllClients(){
         return service.getClients();
     }
+
     @GetMapping ("/{id}")
     public ResponseEntity<ClientManager> getClientById(@PathVariable int id){
         ClientManager foundClient = service.getClientId(id);

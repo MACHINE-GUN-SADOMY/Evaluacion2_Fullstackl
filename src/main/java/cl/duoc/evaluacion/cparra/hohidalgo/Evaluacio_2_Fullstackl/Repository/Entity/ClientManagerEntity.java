@@ -1,6 +1,5 @@
 package cl.duoc.evaluacion.cparra.hohidalgo.Evaluacio_2_Fullstackl.Repository.Entity;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.AllArgsConstructor;

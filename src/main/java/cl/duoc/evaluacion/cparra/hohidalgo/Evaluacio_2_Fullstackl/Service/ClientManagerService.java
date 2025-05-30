@@ -67,7 +67,7 @@ public class ClientManagerService {
             repository.removeClient(foundClient);
             return true;
         }
-        return false; // continuar
+        return false;
     }
 
     public boolean replaceClient(int clientId, ClientManager newClient) {

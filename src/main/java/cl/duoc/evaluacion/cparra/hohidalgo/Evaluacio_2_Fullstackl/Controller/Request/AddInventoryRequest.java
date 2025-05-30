@@ -1,28 +1,27 @@
 package cl.duoc.evaluacion.cparra.hohidalgo.Evaluacio_2_Fullstackl.Controller.Request;
 
-import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+
+import jakarta.validation.constraints.NotBlank;
+
+import lombok.AllArgsConstructor;
+
 import lombok.NoArgsConstructor;
+
 import lombok.Setter;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class AddClientManagerRequest {
+public class AddInventoryRequest {
     @NotBlank
-    private String clientName;
-
+    private String productName;
     @NotBlank
-    private String clientLastName;
-
+    private String productDescription;
     @NotBlank
-    private String clientEmail;
+    private String productCategory;
 
-    @NotBlank
-    private String password;
-    
-    private int phoneNumber;
+    private int productPrice;
+    private int productQuantity; // not blank no puede ir con variables INT
 }

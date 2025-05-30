@@ -1,8 +1,6 @@
 package cl.duoc.evaluacion.cparra.hohidalgo.Evaluacio_2_Fullstackl.Service.Domain;
 
-
-
-public class ClientManager {
+public class ClientManager{
     private int clientId;
     private String clientName;
     private String clientLastName;

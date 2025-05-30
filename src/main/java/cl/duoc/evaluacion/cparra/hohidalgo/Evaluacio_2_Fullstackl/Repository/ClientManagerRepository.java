@@ -35,7 +35,7 @@ public class ClientManagerRepository {
             if(client.getClientName().equals(clientName)){
                 return client;
             }
-        }return null; // solucionar
+        }return null;
     }
 
     public void clientSave(ClientManagerEntity saveClient){
